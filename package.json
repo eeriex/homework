@@ -1,6 +1,9 @@
 {
   "name": "homework",
   "private": "true",
+  "scripts": {
+    "start": "cypress open"
+  },
   "devDependencies": {
     "cypress": "^4.9.0"
   }
