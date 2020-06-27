@@ -1,0 +1,7 @@
+{
+  "name": "homework",
+  "private": "true",
+  "devDependencies": {
+    "cypress": "^4.9.0"
+  }
+}
