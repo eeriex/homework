@@ -11,14 +11,23 @@ describe ('Bitdefender Homework', function() {
     cy.contains('Continue my trial').click()
   })
 
-  it ('Should log into Bitdefender Central', function() {
+  it('Should log into Bitdefender Central', function() {
     cy.url().should(function(url) {
       return url.startsWith(`${Cypress.config().baseUrl}/activity`)
     })
   })
 
-  it ('Should navigate to My Devices', function() {
-    cy.get('.left-nav-trigger').click()
-    cy.get('#a_1580325650').click()
+  it('Should navigate to My Devices', function() {
+    navigateToMyDevices()
+  })
+
+  it('Should navigate to at-risk device', function() {
+    navigateToMyDevices()
+    cy.get('.device-status span').contains('At risk').first().click()
   })
 })
+
+function navigateToMyDevices() {
+  cy.get('.left-nav-trigger').click()
+  cy.get('#a_1580325650').click()
+}
