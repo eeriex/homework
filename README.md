@@ -1,14 +1,22 @@
 # homework
 Bitdefender Homework
 
-## Windows Setup
+## System Requirements
+node version 12 or above
+
+## Initial Setup (install dependencies)
+```console
+npm install
+```
+
+## Open Cypress on Windows
 ```console
 set cypress_email=[email]
 set cypress_password=[password]
 npm start
 ```
 
-## Unix Setup
+## Open Cypress on UNIX
 ```console
 export cypress_email=[email]
 export cypress_password=[password]
