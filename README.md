@@ -1,6 +1,3 @@
-# homework
-Bitdefender Homework
-
 ## System Requirements
 node version 12 or above
 
