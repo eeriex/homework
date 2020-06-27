@@ -9,16 +9,24 @@ node version 12 or above
 npm install
 ```
 
-## Open Cypress on Windows
+## Set Credentials on Windows
 ```console
 set cypress_email=[email]
 set cypress_password=[password]
-npm start
 ```
 
-## Open Cypress on UNIX
+## Set Credentials on UNIX
 ```console
 export cypress_email=[email]
 export cypress_password=[password]
+```
+
+## Run Tests in CLI
+```console
+npm test
+```
+
+## Run Tests Interactively
+```console
 npm start
 ```

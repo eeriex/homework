@@ -2,6 +2,7 @@
   "name": "homework",
   "private": "true",
   "scripts": {
+    "test": "cypress run",
     "start": "cypress open"
   },
   "devDependencies": {
