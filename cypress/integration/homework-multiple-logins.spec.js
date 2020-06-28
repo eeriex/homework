@@ -13,17 +13,23 @@ describe ('Bitdefender Homework', function() {
 
   it('Should log into Bitdefender Central', function() {
     cy.url().should(function(url) {
-      return url.startsWith(`${Cypress.config().baseUrl}/activity`)
+      return url.startsWith(`https://central.bitdefender.com/activity`)
     })
   })
 
   it('Should navigate to My Devices', function() {
     navigateToMyDevices()
+    cy.url().should(function(url) {
+      return url.startsWith(`https://central.bitdefender.com/devices`)
+    })
   })
 
   it('Should navigate to at-risk device', function() {
     navigateToMyDevices()
     cy.get('.device-status span').contains('At risk').first().click()
+    cy.url().should(function(url) {
+      return url.startsWith(`https://central.bitdefender.com/dashboard?device_id=`)
+    })
   })
 })
 

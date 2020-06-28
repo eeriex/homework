@@ -10,12 +10,18 @@ describe ('Bitdefender Homework', function() {
     cy.contains('Continue my trial').click()
 
     cy.url().should(function(url) {
-      return url.startsWith(`${Cypress.config().baseUrl}/activity`)
+      return url.startsWith(`https://central.bitdefender.com/activity`)
     })
 
     cy.get('.left-nav-trigger').click()
     cy.get('#a_1580325650').click()
+    cy.url().should(function(url) {
+      return url.startsWith(`https://central.bitdefender.com/devices`)
+    })
 
     cy.get('.device-status span').contains('At risk').first().click()
+    cy.url().should(function(url) {
+      return url.startsWith(`https://central.bitdefender.com/dashboard?device_id=`)
+    })
   })
 })
